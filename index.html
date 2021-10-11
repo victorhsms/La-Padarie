@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>La Padarie</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="./imagens/Logo 1.svg" alt="Logo 'La Padarie'">
+    </header>
+
+    <main>
+        <section class="list-card">
+            <div class="card">
+                <div class="card-info">
+                    <span>Pessoas na fila</span>
+                    <img src="./imagens/clientes.svg" alt="">
+                </div>
+                <p id="custumersDisplay">0</p>
+            </div>
+            <div class="card">
+                <div class="card-info">
+                    <span>Pães vendidos</span>
+                    <img src="./imagens/vendidos.svg" alt="">
+                </div>
+                <p id="salesDisplay">0</p>
+            </div>
+            <div class="card">
+                <div class="card-info">
+                    <span>Entrada</span>
+                    <img src="./imagens/entrada.svg" alt="">
+                </div>
+                <p id="totalDisplay">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section id="historic">
+            <a href="#" onclick="Modal.open()">+ Adicionar pessoa a fila</a>
+       <!-- <div id="historic-items">
+                <div class="historic-text">
+                    <h3>Matheus Novais</h3>
+                    <div class="historic-text-paragraphs">
+                        <p>Total de pães:&nbsp;<span>50 pães</span></p>
+                        <p>Total a pagar:&nbsp;<span>R$ 25,00</span></p>
+                    </div>
+                </div>
+                <a href=""><img src="./imagens/trash.svg" alt="icone de uma Lixeira"></a>
+            </div> -->
+        </section>
+    </main>
+
+    <div class="modal-overlay">
+        <form action="" onsubmit="Form.submit(event)" class="modal">
+            <div class="modal-form">
+                <h2>Adicionar pessoa a fila</h2>
+                <input type="text" id="nova-pessoa" name="nova-pessoa" placeholder="Nome completo do cliente">
+                <input type="number" id="qnt-paes" name="nova-pessoa" placeholder="Total de pães">
+            </div>
+            <div class="modal-button">
+                <button onclick="">Enviar</button>
+                <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>Com &#128155; Info Jr UFBA <span id="year"></span></p>
+        <script>
+            document.getElementById("year").innerHTML = new Date().getFullYear();
+        </script>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

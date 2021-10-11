@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header */
+body {
+    background-color: #E5CF94;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #965A1B;
+    padding: 5rem 0 11.313rem;
+}
+
+/* cards */
+
+.list-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.563rem;
+    width: min(88vw, 77.188rem);
+    margin: -4.375rem auto 5rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.125rem 1.313rem 1rem;
+    background-color: #FFF;
+    border-radius: 5px;
+    gap: 1.125rem;
+    height: max-content;
+}
+
+.card:last-child {
+    background-color: #5F3305;
+    color: #FFF;
+}
+
+.card p {
+    font-size: 2.25rem;
+    line-height: 3.375rem;
+    font-weight: 500;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#historic {
+    display: flex;
+    flex-direction: column;
+    width: min(88vw, 77.188rem);
+    margin: 0 auto;
+    gap: 0.313rem;
+}
+
+#historic a {
+    font-weight: 700;
+    color: #5F3305;
+    width: max-content;
+}
+
+#historic a:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+#historic-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.938rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    color: #5F3305;
+    margin-bottom: 1.063rem;
+}
+
+#historic-items:hover {
+    padding: 1.2rem 0.938rem;
+    transition: 0.2s;
+}
+
+#historic-items:last-child {
+    margin: 0;
+}
+
+.historic-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.313rem;
+}
+
+.historic-text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.historic-text p {
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.historic-text p span {
+    font-weight: 400;
+}
+
+/* modal */
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(229, 207, 148, 0.5);
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: #FFF;
+    padding: 3.125rem 0 1.875rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3.938rem;
+    width: 88vw;
+    max-width: 37.813rem;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.938rem;
+}
+
+.modal-form h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #5F3305;
+    margin-bottom: 0.625rem;
+    text-align: center;
+}
+
+.modal-form input {
+    padding: 1rem 1.563rem;
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    margin: 0 1.875rem;
+}
+
+.modal-form input::placeholder {
+    font-size: 0.75rem;
+    color: #7D7D7D;
+}
+
+.modal-form input:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.modal-button {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    margin: 0 1.875rem;
+}
+
+.modal-button button {
+    background-color: #5F3305;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #FFF;
+    padding: 1.125rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modal-button button:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.modal-button a {
+    background-color: #FFF;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #DB1E1E;
+    border: 1px solid #DB1E1E;
+    padding: 1.125rem 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.modal-button a:hover {
+    color: #5F3305;
+    border: 1px solid #5F3305;
+    transition: 0.3s;
+}
+
+/* footer */
+footer {
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 5rem 0;
+    color: #5F3305;
+    letter-spacing: 0.013rem;
+}
+
+@media screen and (min-width: 550px) {
+    .historic-text-paragraphs {
+        display: flex;
+        gap: 0.938rem;
+    }
+
+    #historic {
+        gap: 1.563rem;
+    }
+
+    #historic-items {
+        margin: 0;
+    }
+
+    /* modal */
+    .modal-form h2 {
+        text-align: left;
+        margin-left: 1.875rem;
+    }
+
+    .modal-button {
+        flex-direction: row;
+    }
+
+    .modal-button button, .modal-button a {
+        width: 47.71%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .list-card {
+        flex-direction: row;
+    }
+    .card {
+        width: 30.36%;
+    }
+}
